@@ -1,8 +1,8 @@
 <?php
-$servername = "140.123.102.94"; // 你的MySQL IP
-$username = "410410023";          // 你的MySQL帳號
-$password = "410410023";          // 你的MySQL密碼
-$dbname = "410410023";             // 你的資料庫名
+$servername = "ip address"; // 你的MySQL IP
+$username = "username";          // 你的MySQL帳號
+$password = "password";          // 你的MySQL密碼
+$dbname = "database";             // 你的資料庫名
 
 // 建立連線
 $conn = new mysqli($servername, $username, $password, $dbname);
