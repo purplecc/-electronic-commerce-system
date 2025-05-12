@@ -1,0 +1,98 @@
+/* 先把所有元素的 margin 和 padding 清掉，避免瀏覽器預設空隙影響版面 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 包含 padding 和 border 進元素的總寬高，方便計算 */
+}
+
+/* 設定 body 整體樣式 */
+body {
+    background-color: aliceblue; /* 背景顏色設成白色 */
+    font-family: 'Poppins', sans-serif; /* 使用 Poppins 字體，找不到才用sans-serif */
+    box-sizing: border-box; /* 保持一致，寬高包含內距跟邊框 */
+    width: 100vw; /* 寬度設成100%視窗 */
+    height: 100vh; /* 高度設成100螢幕高度 */
+    overflow-x: hidden; /* 禁止左右捲動條（防止超出畫面） */
+    display: flex; /* 使用 Flexbox，讓裡面的內容可以置中 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+}
+
+/* 設定登入表單外框 */
+.login-container {
+    background-color: white; /* 背景白色 */
+    padding-top: 60px; /* 內容跟外框距離 */
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 10px; /* 圓角 10px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 四邊有輕微的陰影 */
+    text-align: center; /* 內容文字置中 */
+    
+}
+
+.login-container input {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+/* 設定輸入框跟密碼包裹區的共同樣式 */
+.login-container input,
+.password-wrapper {
+    width: 100%; /* 兩個都設成寬度100%，保持統一寬度 */
+    margin: 10px 0; /* 上下各10px間距 */
+    position: relative; /* 密碼框需要相對定位，讓眼睛 icon 絕對定位在裡面 */
+}
+
+/* 密碼輸入框特別設定：預留右邊空間給眼睛 icon */
+.password-wrapper input {
+    padding-right: 50px; /* 輸入框右邊留50px，不然眼睛會壓到文字 */
+}
+
+/* 眼睛 icon 的設定 */
+.toggle-pw {
+    position: absolute; /* 絕對定位 */
+    right: 5px; /* 距離右邊10px */
+    top: 50%; /* 垂直中心位置 */
+    transform: translateY(-50%); /* 往上拉自己高度的一半，真正垂直置中 */
+    cursor: pointer; /* 變成手指圖示，提示可以點擊 */
+    color: gray; /* 顏色設定成灰色 */
+}
+
+/* 登入按鈕的樣式 */
+.login-button {
+    width: 50%; /* 按鈕寬度50%，跟輸入框對齊 */
+    background-color: rgb(0, 129, 251); /* 藍色背景 */
+    color: white; /* 字體白色 */
+    border: none; /* 移除預設邊框 */
+    padding: 10px; /* 內距10px */
+    font-size: 16px; /* 字體大小16px */
+    border-radius: 5px; /* 按鈕邊角圓弧5px */
+    cursor: pointer; /* 滑鼠移過去變成手指圖示 */
+    margin-top: 10px;
+}
+
+/* 當滑鼠移到登入按鈕上時的效果 */
+.login-button:hover {
+    background-color: rgb(1, 117, 233); /* hover時變成稍微深一點的藍色 */
+}
+
+/* 註冊連結區域 */
+.signup-link {
+    margin-top: 50px;
+    margin-bottom: 10px; 
+    font-size: 14px; /* 字體稍微小一點 */
+}
+
+/* 註冊連結的樣式 */
+.signup-link a {
+    color: blue; /* 連結字體顏色是紫色 */
+    text-decoration: none; /* 移除底線 */
+}
+
+.signup-link a:hover {
+    cursor: pointer;
+}
+
+input {
+    padding: 8px;
+}

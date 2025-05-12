@@ -1,0 +1,97 @@
+/* 先把所有元素的 margin 和 padding 清掉，避免瀏覽器預設空隙影響版面 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 包含 padding 和 border 進元素的總寬高，方便計算 */
+}
+
+/* 設定 body 整體樣式 */
+body {
+    background-color: aliceblue; /* 背景顏色設成藍色 */
+    font-family: 'Poppins', sans-serif; /* 使用 Poppins 字體，找不到才用sans-serif */
+    box-sizing: border-box; /* 保持一致，寬高包含內距跟邊框 */
+    width: 100vw; /* 寬度設成100%視窗 */
+    height: 100vh; /* 高度設成100螢幕高度 */
+    overflow-x: hidden; /* 禁止左右捲動條（防止超出畫面） */
+    display: flex; /* 使用 Flexbox，讓裡面的內容可以置中 */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 設定登入表單外框 */
+.register-container {
+    /* outline: 1px solid red; */
+    width: 30%;
+    height: 90%;
+    background-color: white; /* 背景白色 */
+    border-radius: 10px; /* 圓角 10px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 四邊有輕微的陰影 */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.register-container [class^="reg-"] {
+    width: 100%;
+} 
+
+.register-container form {
+    /* outline: 1px solid blue; */
+    height: 80%;
+    width: 70%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.register-container input {
+    /* outline: 1px solid blue; */
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+.reg-password, .reg-confirm {
+    position: relative;
+}
+
+.reg-photo input {
+    border: none;
+}
+
+.toggle-pw, .toggle-cf {
+    position: absolute; 
+    margin-top: 10px;
+    padding-left: 5px;
+    right: 5px;
+    color: gray;
+}
+
+.toggle-pw:hover, .toggle-cf:hover {
+    cursor: pointer;
+}
+
+.register-button {
+    width: 70%; /* 按鈕寬度100%，跟輸入框對齊 */
+    background-color: rgb(0, 129, 251); /* 藍色背景 */
+    color: white; /* 字體白色 */
+    border: none; /* 移除預設邊框 */
+    padding: 10px; /* 內距10px */
+    font-size: 16px; /* 字體大小16px */
+    border-radius: 5px; /* 按鈕邊角圓弧5px */
+    cursor: pointer; /* 滑鼠移過去變成手指圖示 */
+    margin-top: 10px;
+    margin-left: auto; /* ⭐️ 自動推到中間 */
+    margin-right: auto; /* ⭐️ 自動推到中間 */
+}
+
+.register-button:hover {
+    background-color: rgb(1, 117, 233); /* hover時變成稍微深一點的藍色 */
+}
+
+input {
+    margin-top: 5px;
+    padding: 5px;
+}
